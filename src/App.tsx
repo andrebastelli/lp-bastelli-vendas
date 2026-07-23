@@ -582,6 +582,7 @@ function QuebraDeCrenca() {
     </section>
   );
 }
+
 /* ============================================================
    4. PROBLEMA REAL — mapa
 ============================================================ */
@@ -694,7 +695,7 @@ function ProblemaReal() {
             {String(active + 1).padStart(2, "0")}
           </div>
 
-          <div className="relative min-h-[360px] border-t border-bastelli-navy/15 pt-10 md:min-h-[420px] md:pt-14">
+          <div className="relative border-t border-bastelli-navy/15 pt-10 md:pt-14">
             <div
               key={current.area}
               className="grid grid-cols-12 gap-4 md:gap-8"
