@@ -233,7 +233,6 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-bastelli-navy text-white">
-      {/* Blueprint técnico — camadas de fundo */}
       {/* Grão de papel (noise SVG) */}
       <div
         aria-hidden
@@ -297,193 +296,45 @@ function Hero() {
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-6 md:px-8 md:pb-24 md:pt-12">
-        {/* Cabeçalho acima do vídeo — assimétrico */}
-        <div className="mb-5 flex flex-nowrap items-center justify-center gap-2 whitespace-nowrap text-[10px] uppercase tracking-[0.18em] text-white/50 md:mb-7 md:gap-4 md:text-[11px] md:tracking-[0.24em]">
-          <span className="hidden h-px w-10 bg-white/15 md:block" />
-          <span className="inline-flex items-center gap-2 rounded-sm border border-orange-500/40 bg-orange-500/10 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400 md:text-[11px]">
-            <span className="relative inline-flex items-center justify-center">
-              <span className="absolute inset-0 animate-ping rounded-sm bg-orange-500/60 opacity-75" />
-              <span className="relative inline-flex items-center justify-center rounded-[3px] bg-orange-500 px-1 py-[1px]">
-                <svg viewBox="0 0 24 24" className="h-2.5 w-2.5 fill-white" aria-hidden="true">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </span>
+      <div className="relative mx-auto max-w-6xl px-5 pb-20 pt-14 md:px-8 md:pb-28 md:pt-20">
+        <div className="mb-6 flex flex-nowrap items-center justify-center gap-3 whitespace-nowrap text-[10px] uppercase tracking-[0.24em] text-white/60 md:mb-8 md:text-[11px]">
+          <span className="inline-flex items-center gap-2 rounded-sm border border-bastelli-orange/50 bg-bastelli-orange/10 px-2.5 py-1 font-mono font-bold text-bastelli-orange">
+            <span className="relative inline-flex h-1.5 w-1.5">
+              <span className="absolute inset-0 animate-ping rounded-full bg-bastelli-orange/70" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-bastelli-orange" />
             </span>
-            Vídeo
+            Curso introdutório
           </span>
-          <span className="text-white/70">Aula-convite</span>
-          <span className="text-white/25">·</span>
-          <span className="text-white/40">Assista antes de decidir</span>
-          <span className="hidden h-px w-10 bg-white/15 md:block" />
+          <span className="text-white/70">com Bruno Bastelli</span>
         </div>
 
-        {/* VÍDEO — foco principal, com moldura editorial */}
-        <div className="relative">
-          <span
-            aria-hidden
-            className="absolute -left-2 -top-2 h-6 w-6 border-l-2 border-t-2 border-bastelli-orange md:-left-3 md:-top-3 md:h-8 md:w-8"
-          />
-          <span
-            aria-hidden
-            className="absolute -right-2 -bottom-2 h-6 w-6 border-b-2 border-r-2 border-bastelli-orange md:-right-3 md:-bottom-3 md:h-8 md:w-8"
-          />
-          <VSLPlayer />
-          <p className="mx-auto mt-5 max-w-xl text-center text-[13px] leading-relaxed text-white/55 md:text-[14px]">
-            Se você tem uma loja online e as vendas não estão saindo do lugar, começa por aqui. É rápido.
+        <h1 className="mx-auto max-w-5xl text-center font-display text-[38px] font-semibold leading-[1.02] tracking-[-0.025em] md:text-[80px]">
+          Aprenda os{" "}
+          <span className="relative inline-block">
+            fundamentos
+            <span
+              aria-hidden
+              className="absolute -bottom-1 left-0 h-[6px] w-full bg-bastelli-orange/70 md:-bottom-2 md:h-[12px]"
+            />
+          </span>{" "}
+          que todo lojista deveria entender antes de abrir, ajustar ou tentar{" "}
+          <span className="text-white/60">crescer uma loja virtual.</span>
+        </h1>
+
+        <p className="mx-auto mt-8 max-w-3xl text-center text-[16px] leading-relaxed text-white/80 md:mt-10 md:text-[19px]">
+          Um treinamento direto e estratégico para quem quer entender o
+          e‑commerce como um negócio de verdade — sem promessa milagrosa, sem
+          fórmula pronta e sem conversa de guru.
+        </p>
+
+        <div className="mx-auto mt-10 flex max-w-xl flex-col items-center gap-3 md:mt-12">
+          <CTA className="w-full">Quero começar agora</CTA>
+          <p className="text-[11px] uppercase tracking-[0.24em] text-white/45">
+            Acesso imediato · Pagamento único
           </p>
         </div>
-
-        {/* TÍTULO — assimétrico, sem centralização */}
-        <div className="mt-16 grid gap-10 md:mt-24 md:grid-cols-12 md:gap-12">
-          <div className="md:col-span-7">
-            <div className="mb-4 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.28em] text-bastelli-orange">
-              <span className="h-px w-6 bg-bastelli-orange" />
-              Curso introdutório
-            </div>
-            <h1 className="font-display text-[40px] font-semibold leading-[0.98] tracking-[-0.02em] md:text-[76px]">
-              Sua loja tá aberta.
-              <br />
-              <span className="text-white/45">O problema</span> é que{" "}
-              <span className="relative inline-block">
-                ninguém entra
-                <span
-                  aria-hidden
-                  className="absolute -bottom-1 left-0 h-[6px] w-full bg-bastelli-orange/70 md:-bottom-2 md:h-[10px]"
-                />
-              </span>
-              .
-            </h1>
-            <p className="mt-8 max-w-xl text-[16px] leading-relaxed text-white/75 md:text-[18px]">
-              Anúncio, frete, checkout, foto, preço, estoque — tudo influencia,
-              e ninguém te contou como essas peças se encaixam. É isso que a
-              gente destrava aqui.
-            </p>
-          </div>
-        </div>
       </div>
-
     </section>
-  );
-}
-
-function VSLPlayer() {
-  const [playing, setPlaying] = useState(false);
-  const anchorRef = useRef<HTMLDivElement | null>(null);
-  const [outOfView, setOutOfView] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
-
-  useEffect(() => {
-    const el = anchorRef.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      ([entry]) => setOutOfView(!entry.isIntersecting),
-      { threshold: 0, rootMargin: "-80px 0px 0px 0px" }
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
-  const showFloating = outOfView && !dismissed;
-
-  return (
-    <div ref={anchorRef}>
-    <div className="relative w-full overflow-hidden border border-white/15 bg-black/30 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.7)]">
-      <div style={{ aspectRatio: "16/9" }} className="relative w-full">
-        {playing ? (
-          <div className="flex h-full w-full items-center justify-center bg-black text-center text-white/60">
-            <div className="px-4 font-mono text-[11px] uppercase tracking-widest">
-              [[INSERIR ARQUIVO OU URL DA VSL APROVADA]]
-            </div>
-          </div>
-        ) : (
-          <>
-            <Placeholder label="Poster real com Bruno — VSL" ratio="16/9" tone="navy" />
-            <button
-              onClick={() => setPlaying(true)}
-              aria-label="Reproduzir vídeo"
-              className="absolute inset-0 flex items-center justify-center bg-black/25 transition hover:bg-black/10"
-            >
-              <span className="grid h-16 w-16 place-items-center rounded-full bg-bastelli-orange text-white shadow-lg md:h-20 md:w-20">
-                <svg width="22" height="24" viewBox="0 0 22 24" fill="currentColor">
-                  <path d="M2 2v20l18-10L2 2z" />
-                </svg>
-              </span>
-            </button>
-          </>
-        )}
-      </div>
-    </div>
-    {showFloating && (
-      <div
-        className="fixed bottom-4 right-4 z-50 w-[240px] overflow-hidden rounded-lg border border-white/20 bg-black shadow-2xl animate-fade-in sm:w-[300px] md:w-[340px]"
-        role="complementary"
-        aria-label="Vídeo flutuante"
-      >
-        <div className="flex flex-col items-center justify-center gap-1 bg-bastelli-navy px-3 py-2 pr-8 text-[10px] uppercase tracking-[0.18em] text-white/50">
-          <div className="flex flex-nowrap items-center justify-center gap-2 whitespace-nowrap">
-            <span className="inline-flex items-center gap-2 rounded-sm border border-orange-500/40 bg-orange-500/10 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400">
-              <span className="relative inline-flex items-center justify-center">
-                <span className="absolute inset-0 animate-ping rounded-sm bg-orange-500/60 opacity-75" />
-                <span className="relative inline-flex items-center justify-center rounded-[3px] bg-orange-500 px-1 py-[1px]">
-                  <svg viewBox="0 0 24 24" className="h-2.5 w-2.5 fill-white" aria-hidden="true">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </span>
-              </span>
-              Vídeo
-            </span>
-            <span className="text-white/70">Aula-convite</span>
-          </div>
-          <span className="text-white/40">Assista antes de começar</span>
-        </div>
-        <button
-          onClick={() => setDismissed(true)}
-          aria-label="Fechar vídeo flutuante"
-          className="absolute right-1.5 top-1.5 z-10 grid h-6 w-6 place-items-center rounded-full bg-black/70 text-white/80 backdrop-blur transition hover:bg-black hover:text-white"
-        >
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path d="M1 1l8 8M9 1l-8 8" />
-          </svg>
-        </button>
-        <button
-          onClick={() => {
-            anchorRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-          }}
-          className="block w-full text-left"
-          aria-label="Voltar para o vídeo"
-        >
-          <div style={{ aspectRatio: "16/9" }} className="relative w-full bg-black">
-            {playing ? (
-              <div className="flex h-full w-full items-center justify-center bg-black text-center text-white/60">
-                <div className="px-3 font-mono text-[9px] uppercase tracking-widest">
-                  [[VSL EM REPRODUÇÃO]]
-                </div>
-              </div>
-            ) : (
-              <>
-                <Placeholder label="VSL" ratio="16/9" tone="navy" />
-                <span
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    e.preventDefault();
-                    setPlaying(true);
-                  }}
-                  className="absolute inset-0 flex items-center justify-center bg-black/30 transition hover:bg-black/10"
-                >
-                  <span className="grid h-10 w-10 place-items-center rounded-full bg-bastelli-orange text-white shadow-lg">
-                    <svg width="12" height="14" viewBox="0 0 22 24" fill="currentColor">
-                      <path d="M2 2v20l18-10L2 2z" />
-                    </svg>
-                  </span>
-                </span>
-              </>
-            )}
-          </div>
-        </button>
-      </div>
-    )}
-    </div>
   );
 }
 
@@ -509,6 +360,10 @@ function Identificacao() {
   }, [paused, falas.length]);
   const total = falas.length;
   const atual = falas[index];
+
+  const goPrev = () => setIndex((i) => (i - 1 + total) % total);
+  const goNext = () => setIndex((i) => (i + 1) % total);
+
   return (
     <section className="border-b border-bastelli-line bg-[#F7F3EE]">
       <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-28">
@@ -568,33 +423,84 @@ function Identificacao() {
             ))}
           </div>
 
-          {/* Controles: contador à esquerda + trilha de bolinhas à direita */}
-          <div className="mt-4 flex items-center justify-between gap-6 border-t border-bastelli-navy/15 pt-3 md:mt-6 md:pt-5">
-            <div className="flex items-baseline gap-2 font-mono text-bastelli-navy/70">
-              <span className="text-[22px] font-semibold text-bastelli-navy md:text-[28px]">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <span className="text-[12px] uppercase tracking-[0.2em] text-bastelli-navy/40">
-                / {String(total).padStart(2, "0")}
-              </span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              {falas.map((_, i) => (
+          {/* Setas de navegação — desktop, flutuantes nas laterais */}
+          <button
+            type="button"
+            onClick={goPrev}
+            aria-label="Fala anterior"
+            className="absolute left-0 top-1/2 hidden -translate-x-2 -translate-y-1/2 items-center justify-center rounded-full border border-bastelli-navy/20 bg-white/70 p-2.5 text-bastelli-navy/60 backdrop-blur transition hover:border-bastelli-orange/50 hover:text-bastelli-orange md:flex"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            onClick={goNext}
+            aria-label="Próxima fala"
+            className="absolute right-0 top-1/2 hidden translate-x-2 -translate-y-1/2 items-center justify-center rounded-full border border-bastelli-navy/20 bg-white/70 p-2.5 text-bastelli-navy/60 backdrop-blur transition hover:border-bastelli-orange/50 hover:text-bastelli-orange md:flex"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+
+          {/* Controles: contador + dots em cima, setas prev/next abaixo */}
+          <div className="mt-4 border-t border-bastelli-navy/15 pt-3 md:mt-6 md:pt-5">
+            <div className="flex flex-col gap-4">
+              {/* Linha 1: contador + dots */}
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-baseline gap-2 font-mono text-bastelli-navy/70">
+                  <span className="text-[22px] font-semibold text-bastelli-navy md:text-[28px]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-[12px] uppercase tracking-[0.2em] text-bastelli-navy/40">
+                    / {String(total).padStart(2, "0")}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  {falas.map((_, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      aria-label={`Ir para fala ${i + 1}`}
+                      onClick={() => setIndex(i)}
+                      className={`h-1 rounded-full transition-all duration-500 ${
+                        i === index
+                          ? "w-10 bg-bastelli-orange"
+                          : "w-2 bg-bastelli-navy/20 hover:bg-bastelli-navy/40"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Linha 2: botões prev/next, alinhados à direita */}
+              <div className="flex items-center justify-end gap-3">
                 <button
-                  key={i}
                   type="button"
-                  aria-label={`Ir para fala ${i + 1}`}
-                  onClick={() => setIndex(i)}
-                  className={`h-1 rounded-full transition-all duration-500 ${
-                    i === index
-                      ? "w-10 bg-bastelli-orange"
-                      : "w-2 bg-bastelli-navy/20 hover:bg-bastelli-navy/40"
-                  }`}
-                />
-              ))}
+                  onClick={goPrev}
+                  aria-label="Fala anterior"
+                  className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  onClick={goNext}
+                  aria-label="Próxima fala"
+                  className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+          </div>
 
         {/* Fecho — dividido em duas colunas, com assinatura */}
         <div className="mt-12 grid gap-6 md:mt-28 md:grid-cols-12 md:gap-10">
@@ -766,6 +672,9 @@ function ProblemaReal() {
 
   const current = bloques[active];
 
+  const goPrev = () => setActive((v) => (v - 1 + bloques.length) % bloques.length);
+  const goNext = () => setActive((v) => (v + 1) % bloques.length);
+
   return (
     <section className="bg-bastelli-paper">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-28">
@@ -877,6 +786,30 @@ function ProblemaReal() {
                 />
               ))}
             </div>
+          </div>
+
+          {/* setas prev/next — alinhadas à direita, abaixo dos controles */}
+          <div className="mt-4 flex items-center justify-end gap-3">
+            <button
+              type="button"
+              onClick={goPrev}
+              aria-label="Área anterior"
+              className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={goNext}
+              aria-label="Próxima área"
+              className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -1091,6 +1024,9 @@ function RodaPilaresCarousel({
 
   const current = pilares[active];
 
+  const goPrev = () => setActive((v) => (v - 1 + pilares.length) % pilares.length);
+  const goNext = () => setActive((v) => (v + 1) % pilares.length);
+
   return (
     <div
       className="relative mt-4 md:mt-16"
@@ -1147,6 +1083,30 @@ function RodaPilaresCarousel({
             />
           ))}
         </div>
+      </div>
+
+      {/* setas prev/next — alinhadas à direita, abaixo dos controles */}
+      <div className="mt-4 flex items-center justify-end gap-3">
+        <button
+          type="button"
+          onClick={goPrev}
+          aria-label="Pilar anterior"
+          className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          onClick={goNext}
+          aria-label="Próximo pilar"
+          className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
       </div>
     </div>
   );
@@ -2270,7 +2230,7 @@ function Garantia() {
           <div className="col-span-12 md:col-span-2 md:row-span-3">
             <div className="flex items-center gap-3 md:sticky md:top-24 md:block">
               <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-bastelli-orange md:[writing-mode:vertical-rl] md:rotate-180">
-                Política da casa
+                Garantia real
               </span>
               <span className="h-px w-16 bg-bastelli-navy/30 md:hidden" />
             </div>
@@ -2279,11 +2239,9 @@ function Garantia() {
           {/* Título deslocado */}
           <div className="col-span-12 md:col-span-10 md:-ml-4">
             <h2 className="font-display text-[34px] leading-[1.02] tracking-tight text-bastelli-navy md:text-[68px]">
-              Nada de{" "}
-              <span className="italic text-bastelli-orange">gatilho barato.</span>
+              Zero <span className="italic text-bastelli-orange">pressão.</span>
               <br className="hidden md:block" />
-              <span className="text-bastelli-navy/60"> Você decide </span>
-              no seu tempo.
+              <span className="text-bastelli-navy/60">Zero medo.</span> Só decisão.
             </h2>
           </div>
 
@@ -2300,13 +2258,11 @@ function Garantia() {
               </div>
 
               <p className="font-display text-[19px] leading-[1.5] text-bastelli-navy md:text-[22px]">
-                Sem contagem regressiva na tela. Sem “últimas vagas”.
-                Sem e-mail dizendo que hoje é o último dia.
+                Não preciso te apressar pra você comprar algo que funciona.
               </p>
               <p className="mt-4 text-[15px] leading-relaxed text-bastelli-navy/75 md:text-[16px]">
-                Se você entrou, assistiu as primeiras aulas e sentiu que
-                não é pra você agora — tudo bem. A gente prefere assim
-                do que te empurrar pra dentro na base do medo.
+                Assista as primeiras aulas com calma. Se não fizer sentido
+                pra sua loja, devolvo cada centavo em até 7 dias.
               </p>
 
               <div className="mt-6 flex items-center gap-3">
@@ -2324,7 +2280,7 @@ function Garantia() {
               Prazo, forma e condições
             </span>
             <span className="font-mono text-[12px] text-bastelli-navy/80">
-              arrependeu, devolve · 7 dias
+              7 dias pra decidir · reembolso sem enrolação
             </span>
           </div>
         </div>
