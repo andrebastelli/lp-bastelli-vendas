@@ -2250,24 +2250,6 @@ function Preco() {
                 );
               })}
             </dl>
-
-            {/* Rodapé — notas soltas em mono, quebra a simetria */}
-            <div className="mt-8 grid gap-4 font-mono text-[11px] leading-relaxed text-bastelli-navy/55 md:grid-cols-2">
-              <div className="flex gap-3">
-                <span className="text-bastelli-orange">*</span>
-                <span>
-                  Não parcelamos internamente. O parcelamento sai como o
-                  cartão permite, no próprio checkout.
-                </span>
-              </div>
-              <div className="flex gap-3">
-                <span className="text-bastelli-orange">*</span>
-                <span>
-                  Emissão de nota, acesso e suporte tocados pela Bastelli
-                  direto — sem intermediário.
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
