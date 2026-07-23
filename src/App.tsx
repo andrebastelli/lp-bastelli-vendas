@@ -573,8 +573,7 @@ function QuebraDeCrenca() {
 
         {/* fecho — linha única, tipografia acima do H2 */}
         <p className="mt-16 font-display text-[38px] font-light leading-[1.02] tracking-[-0.02em] md:mt-24 md:text-[112px]">
-          Sua loja não é segunda renda,
-          <br />
+          Sua loja não é segunda renda,{" "}
           <span className="text-bastelli-orange">
             não é apenas a plataforma e nem apenas anúncio.
           </span>
