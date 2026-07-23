@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import bastelliLogo from "@/assets/bastelli-logo.png";
 import rodaEcommerce from "@/assets/roda-ecommerce.png";
+import BrunoSantos from "@/assets/bruno_no_santos.webp";
+import BrunoKabum from "@/assets/bruno_palestra.webp";
+import BrunoDev from "@/assets/consuiltoria_com_cliente_bastelli.webp";
+import BrunoAgencia from "@/assets/bruno_agencia.webp";
+import BrunoClientes from "@/assets/astelli_clientes.webp";
+import BrunoAbcomm from "@/assets/premio_abcomm.webp";
 
 function useAutoScrollCarousel<T extends HTMLElement>(itemCount: number, intervalMs = 4500) {
   const ref = useRef<T | null>(null);
@@ -1434,7 +1440,7 @@ function SobreBruno() {
               chapter="Recomeço"
               title="O futebol acabou antes da hora. Precisei recomeçar longe do campo."
               body="Problemas de saúde encerraram a carreira no futebol. Foi ali que a vida profissional recomeçou — dessa vez, atrás de uma tela."
-              img="[[FOTO BRUNO — FUTEBOL/RECOMEÇO]]"
+              img={BrunoSantos}
             />
             <Momento
               n="02"
@@ -1442,7 +1448,7 @@ function SobreBruno() {
               chapter="KaBuM"
               title="Entrei atendendo cliente na KaBuM. Saí entendendo a loja por dentro."
               body="No atendimento dá pra ver tudo: pedido travado, cobrança errada, entrega atrasada, promessa que a loja não cumpre. Foi a melhor escola que eu poderia ter tido."
-              img="[[FOTO BRUNO — KABUM OU INÍCIO NO DIGITAL]]"
+              img={BrunoKabum}
             />
             <Momento
               n="03"
@@ -1450,7 +1456,7 @@ function SobreBruno() {
               chapter="Aprofundamento"
               title="Dev, UX, expedição, integrações, tráfego, Analytics."
               body="Sete anos passando por área diferente a cada ciclo. Cada uma resolveu uma parte do quebra-cabeça — e mostrou como as partes se travam entre si quando ninguém olha o conjunto."
-              img="[[FOTO BRUNO — TRABALHO/CONSULTORIA]]"
+              img={BrunoDev}
             />
             <Momento
               n="04"
@@ -1458,7 +1464,7 @@ function SobreBruno() {
               chapter="Bastelli"
               title="Abri a Bastelli pra fazer o que nenhuma agência fazia."
               body="Consultoria que olha a loja inteira — não só o anúncio. Estruturação de operação, performance, tráfego, dados. Sem terceirizar a decisão que é do dono."
-              img="[[FOTO BRUNO — EVENTO OU PALESTRA]]"
+              img={BrunoAgencia}
             />
             <Momento
               n="05"
@@ -1466,7 +1472,7 @@ function SobreBruno() {
               chapter="Clientes"
               title="200+ lojas atendidas. Um prêmio no meio do caminho."
               body="Projetos entregues em moda, cosméticos, pet, casa, nichos técnicos. Em 2023, a ABComm reconheceu como Melhor Profissional de E-commerce do Interior de SP."
-              img="[[FOTO BRUNO — CLIENTES/BASTELLI]]"
+              img={BrunoClientes}
             />
             <Momento
               n="06"
@@ -1474,7 +1480,7 @@ function SobreBruno() {
               chapter="O curso"
               title="Aí veio o curso. Fundamentos abertos, sem enrolação."
               body="Dava pra condensar 16 anos de operação em algo que qualquer lojista pudesse assistir e começar a decidir melhor. Foi o que fiz."
-              img="[[IMAGEM DO RECONHECIMENTO ABCOMM]]"
+              img={BrunoAbcomm}
             />
             </div>
 
@@ -1531,10 +1537,11 @@ function Momento({
   chapter: string;
   title: string;
   body: string;
-  img: string;
+  img: string; // path/import real da imagem OU "[[LABEL DO QUE FALTA]]"
 }) {
-  // ritmo alternado: pares com imagem grande à direita, ímpares com imagem menor à esquerda
   const isEven = parseInt(n, 10) % 2 === 0;
+  const isPlaceholder = img.startsWith("[[");
+
   return (
     <article className="relative md:py-14 md:first:pt-0 md:last:pb-0">
       <span
@@ -1544,7 +1551,6 @@ function Momento({
         {n}
       </span>
       <div className="grid grid-cols-1 gap-6 md:gap-10 md:grid-cols-2">
-        {/* Coluna de texto — sempre primeiro no mobile, ordem invertida no desktop nos pares */}
         <div className={isEven ? "md:order-2" : "md:order-1"}>
           <div className="flex items-baseline gap-3 flex-wrap">
             <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
@@ -1563,7 +1569,18 @@ function Momento({
           </p>
         </div>
         <div className={isEven ? "md:order-1" : "md:order-2"}>
-          <Placeholder label={img} ratio="4/5" tone="paper" />
+          {isPlaceholder ? (
+            <Placeholder label={img} ratio="4/5" tone="paper" />
+          ) : (
+            <div className="aspect-[4/5] w-full overflow-hidden rounded-lg bg-bastelli-paper">
+              <img
+                src={img}
+                alt={title}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          )}
         </div>
       </div>
     </article>
