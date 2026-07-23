@@ -1282,9 +1282,40 @@ function OQueVaiAprender() {
                 </Accordion>
               ))}
             </ol>
-            <p className="mt-3 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-bastelli-navy/45 md:hidden">
-              Arraste para o lado →
-            </p>
+
+            {/* Navegação mobile — setas prev/next */}
+            <div className="mt-3 flex items-center justify-end gap-3 md:hidden">
+              <button
+                type="button"
+                onClick={() =>
+                  scrollRef.current?.scrollBy({
+                    left: -(scrollRef.current.clientWidth * 0.85),
+                    behavior: "smooth",
+                  })
+                }
+                aria-label="Módulo anterior"
+                className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  scrollRef.current?.scrollBy({
+                    left: scrollRef.current.clientWidth * 0.85,
+                    behavior: "smooth",
+                  })
+                }
+                aria-label="Próximo módulo"
+                className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1448,9 +1479,40 @@ function SobreBruno() {
               img="[[IMAGEM DO RECONHECIMENTO ABCOMM]]"
             />
             </div>
-            <p className="mt-3 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-bastelli-navy/45 md:hidden">
-              Arraste para o lado →
-            </p>
+
+            {/* Navegação mobile — setas prev/next */}
+            <div className="mt-3 flex items-center justify-end gap-3 md:hidden">
+              <button
+                type="button"
+                onClick={() =>
+                  scrollRef.current?.scrollBy({
+                    left: -(scrollRef.current.clientWidth * 0.85),
+                    behavior: "smooth",
+                  })
+                }
+                aria-label="Momento anterior"
+                className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  scrollRef.current?.scrollBy({
+                    left: scrollRef.current.clientWidth * 0.85,
+                    behavior: "smooth",
+                  })
+                }
+                aria-label="Próximo momento"
+                className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
