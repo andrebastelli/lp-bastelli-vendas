@@ -552,11 +552,10 @@ function QuebraDeCrenca() {
     ${i === 2 ? "pl-12 md:pl-24" : ""}
   `}
 >
-  <div
-    className="font-display font-light text-[56px] md:text-[88px] leading-none"
-    style={{ color: "rgba(255,255,255,0.35)" }}
-  >
-    {String(i + 1).padStart(2, "0")}
+  <div className="relative flex items-start">
+    <span className="font-display font-semibold text-[48px] leading-none text-bastelli-orange md:text-[72px]">
+      {String(i + 1).padStart(2, "0")}
+    </span>
   </div>
 
   <div>
@@ -584,7 +583,6 @@ function QuebraDeCrenca() {
     </section>
   );
 }
-
 /* ============================================================
    4. PROBLEMA REAL — mapa
 ============================================================ */
