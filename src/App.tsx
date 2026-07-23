@@ -423,28 +423,6 @@ function Identificacao() {
             ))}
           </div>
 
-          {/* Setas de navegação — desktop, flutuantes nas laterais */}
-          <button
-            type="button"
-            onClick={goPrev}
-            aria-label="Fala anterior"
-            className="absolute left-0 top-1/2 hidden -translate-x-2 -translate-y-1/2 items-center justify-center rounded-full border border-bastelli-navy/20 bg-white/70 p-2.5 text-bastelli-navy/60 backdrop-blur transition hover:border-bastelli-orange/50 hover:text-bastelli-orange md:flex"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            onClick={goNext}
-            aria-label="Próxima fala"
-            className="absolute right-0 top-1/2 hidden translate-x-2 -translate-y-1/2 items-center justify-center rounded-full border border-bastelli-navy/20 bg-white/70 p-2.5 text-bastelli-navy/60 backdrop-blur transition hover:border-bastelli-orange/50 hover:text-bastelli-orange md:flex"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
-
           {/* Controles: contador + dots em cima, setas prev/next abaixo */}
           <div className="mt-4 border-t border-bastelli-navy/15 pt-3 md:mt-6 md:pt-5">
             <div className="flex flex-col gap-4">
@@ -500,7 +478,7 @@ function Identificacao() {
               </div>
             </div>
           </div>
-          </div>
+        </div>
 
         {/* Fecho — dividido em duas colunas, com assinatura */}
         <div className="mt-12 grid gap-6 md:mt-28 md:grid-cols-12 md:gap-10">
@@ -756,63 +734,62 @@ function ProblemaReal() {
             </div>
           </div>
 
-          {/* controles: contador + trilha de progresso + dots */}
-          <div className="mt-10 grid grid-cols-12 items-center gap-4 border-t border-bastelli-navy/15 pt-6">
-            <div className="col-span-3 font-mono text-[12px] tracking-wider text-bastelli-navy/60 md:col-span-2">
-              <span className="text-bastelli-navy">{String(active + 1).padStart(2, "0")}</span>
-              <span className="mx-1 text-bastelli-navy/30">/</span>
-              <span>{String(bloques.length).padStart(2, "0")}</span>
-            </div>
-            <div className="col-span-9 md:col-span-7">
-              <div className="h-px w-full bg-bastelli-navy/15">
-                <div
-                  className="h-px bg-bastelli-orange transition-all duration-500"
-                  style={{ width: `${((active + 1) / bloques.length) * 100}%` }}
-                />
+{/* Controles: contador + dots em cima, setas prev/next abaixo */}
+          <div className="mt-10 border-t border-bastelli-navy/15 pt-6">
+            <div className="flex flex-col gap-4">
+              {/* Linha 1: contador + dots */}
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-baseline gap-2 font-mono text-bastelli-navy/70">
+                  <span className="text-[22px] font-semibold text-bastelli-navy md:text-[28px]">
+                    {String(active + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-[12px] uppercase tracking-[0.2em] text-bastelli-navy/40">
+                    / {String(bloques.length).padStart(2, "0")}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  {bloques.map((b, i) => (
+                    <button
+                      key={b.area}
+                      type="button"
+                      onClick={() => setActive(i)}
+                      aria-label={`Ver área ${b.area}`}
+                      className={`h-1 rounded-full transition-all duration-500 ${
+                        i === active
+                          ? "w-10 bg-bastelli-orange"
+                          : "w-2 bg-bastelli-navy/20 hover:bg-bastelli-navy/40"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Linha 2: botões prev/next, alinhados à direita */}
+              <div className="flex items-center justify-end gap-3">
+                <button
+                  type="button"
+                  onClick={goPrev}
+                  aria-label="Área anterior"
+                  className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  onClick={goNext}
+                  aria-label="Próxima área"
+                  className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
               </div>
             </div>
-            <div className="col-span-12 flex flex-wrap gap-2 md:col-span-3 md:justify-end">
-              {bloques.map((b, i) => (
-                <button
-                  key={b.area}
-                  type="button"
-                  onClick={() => setActive(i)}
-                  aria-label={`Ver área ${b.area}`}
-                  className={`h-1.5 w-6 rounded-full transition-all ${
-                    i === active
-                      ? "bg-bastelli-orange w-10"
-                      : "bg-bastelli-navy/20 hover:bg-bastelli-navy/40"
-                  }`}
-                />
-              ))}
-            </div>
           </div>
-
-          {/* setas prev/next — alinhadas à direita, abaixo dos controles */}
-          <div className="mt-4 flex items-center justify-end gap-3">
-            <button
-              type="button"
-              onClick={goPrev}
-              aria-label="Área anterior"
-              className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={goNext}
-              aria-label="Próxima área"
-              className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
+</div>
         {/* fecho seco */}
         <p className="mt-14 max-w-[36ch] font-display text-[24px] font-light leading-[1.15] tracking-[-0.01em] text-bastelli-navy md:mt-20 md:text-[36px]">
           Nenhum desses pontos precisa de gênio pra arrumar.
@@ -1056,57 +1033,60 @@ function RodaPilaresCarousel({
         </div>
       </div>
 
-      <div className="mt-8 grid grid-cols-12 items-center gap-4 border-t border-bastelli-navy/15 pt-6">
-        <div className="col-span-3 font-mono text-[12px] tracking-wider text-bastelli-navy/60 md:col-span-2">
-          <span className="text-bastelli-navy">{current.n}</span>
-          <span className="mx-1 text-bastelli-navy/30">/</span>
-          <span>{String(pilares.length).padStart(2, "0")}</span>
-        </div>
-        <div className="col-span-9 md:col-span-7">
-          <div className="h-px w-full bg-bastelli-navy/15">
-            <div
-              className="h-px bg-bastelli-orange transition-all duration-500"
-              style={{ width: `${((active + 1) / pilares.length) * 100}%` }}
-            />
+      {/* Controles: contador + dots em cima, setas prev/next abaixo — idêntico ao bloco 2 */}
+      <div className="mt-8 border-t border-bastelli-navy/15 pt-6">
+        <div className="flex flex-col gap-4">
+          {/* Linha 1: contador + dots */}
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-baseline gap-2 font-mono text-bastelli-navy/70">
+              <span className="text-[22px] font-semibold text-bastelli-navy md:text-[28px]">
+                {current.n}
+              </span>
+              <span className="text-[12px] uppercase tracking-[0.2em] text-bastelli-navy/40">
+                / {String(pilares.length).padStart(2, "0")}
+              </span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              {pilares.map((p, i) => (
+                <button
+                  key={p.n}
+                  type="button"
+                  onClick={() => setActive(i)}
+                  aria-label={`Ver pilar ${p.title}`}
+                  className={`h-1 rounded-full transition-all duration-500 ${
+                    i === active
+                      ? "w-10 bg-bastelli-orange"
+                      : "w-2 bg-bastelli-navy/20 hover:bg-bastelli-navy/40"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Linha 2: botões prev/next, alinhados à direita */}
+          <div className="flex items-center justify-end gap-3">
+            <button
+              type="button"
+              onClick={goPrev}
+              aria-label="Pilar anterior"
+              className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={goNext}
+              aria-label="Próximo pilar"
+              className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
           </div>
         </div>
-        <div className="col-span-12 flex flex-wrap gap-2 md:col-span-3 md:justify-end">
-          {pilares.map((p, i) => (
-            <button
-              key={p.n}
-              type="button"
-              onClick={() => setActive(i)}
-              aria-label={`Ver pilar ${p.title}`}
-              className={`h-1.5 rounded-full transition-all ${
-                i === active ? "w-10 bg-bastelli-orange" : "w-6 bg-bastelli-navy/20 hover:bg-bastelli-navy/40"
-              }`}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* setas prev/next — alinhadas à direita, abaixo dos controles */}
-      <div className="mt-4 flex items-center justify-end gap-3">
-        <button
-          type="button"
-          onClick={goPrev}
-          aria-label="Pilar anterior"
-          className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-        </button>
-        <button
-          type="button"
-          onClick={goNext}
-          aria-label="Próximo pilar"
-          className="grid h-11 w-11 place-items-center rounded-md border-2 border-bastelli-orange text-bastelli-orange transition hover:bg-bastelli-orange hover:text-white"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M9 18l6-6-6-6" />
-          </svg>
-        </button>
       </div>
     </div>
   );
@@ -2290,7 +2270,7 @@ function Garantia() {
 }
 
 /* ============================================================
-  16. FAQ
+  15. FAQ
 ============================================================ */
 function FAQ() {
   const groups = [
