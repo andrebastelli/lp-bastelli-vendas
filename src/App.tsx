@@ -5,7 +5,7 @@ import BrunoSantos from "@/assets/bruno_no_santos.webp";
 import BrunoKabum from "@/assets/bruno_palestra.webp";
 import BrunoDev from "@/assets/consuiltoria_com_cliente_bastelli.webp";
 import BrunoAgencia from "@/assets/bruno_agencia.webp";
-import BrunoClientes from "@/assets/astelli_clientes.webp";
+import BrunoClientes from "@/assets/bastelli_clientes.webp";
 import BrunoAbcomm from "@/assets/premio_abcomm.webp";
 
 function useAutoScrollCarousel<T extends HTMLElement>(itemCount: number, intervalMs = 4500) {
