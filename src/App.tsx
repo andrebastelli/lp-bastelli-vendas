@@ -1151,19 +1151,19 @@ function ApresentacaoCurso() {
             </dl>
           </div>
 
-          {/* Coluna numeral dominante */}
+{/* Coluna numeral dominante */}
           <div className="relative md:col-span-5 md:pt-16">
             <div className="relative flex flex-col items-start md:sticky md:top-24">
               <div className="pointer-events-none select-none font-display text-[160px] font-light leading-[0.82] tracking-[-0.06em] text-bastelli-navy md:text-[220px]">
                 12
               </div>
-              <div className="-mt-2 flex items-baseline gap-3 md:-mt-4">
+              <div className="mt-1 flex items-baseline gap-3 md:mt-3">
                 <span className="h-px w-10 translate-y-[-4px] bg-bastelli-orange" />
                 <span className="text-[13px] uppercase tracking-[0.24em] text-bastelli-navy/70">
                   módulos
                 </span>
               </div>
-              <p className="mt-6 max-w-[260px] text-[13px] leading-relaxed text-bastelli-navy/55 md:mt-8 md:ml-4">
+              <p className="mt-3 max-w-[260px] text-[13px] leading-relaxed text-bastelli-navy/55 md:mt-5 md:ml-4">
                 Cada módulo cobre uma parte da operação e conversa com as
                 outras. Nenhum vive isolado.
               </p>
