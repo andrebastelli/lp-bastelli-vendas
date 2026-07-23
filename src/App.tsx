@@ -552,11 +552,10 @@ function QuebraDeCrenca() {
     ${i === 2 ? "pl-12 md:pl-24" : ""}
   `}
 >
-  <div
-    className="font-display font-light text-[56px] md:text-[88px] leading-none"
-    style={{ color: "rgba(255,255,255,0.35)" }}
-  >
-    {String(i + 1).padStart(2, "0")}
+  <div className="relative flex items-start">
+    <span className="font-display font-semibold text-[48px] leading-none text-bastelli-orange md:text-[72px]">
+      {String(i + 1).padStart(2, "0")}
+    </span>
   </div>
 
   <div>
@@ -574,8 +573,7 @@ function QuebraDeCrenca() {
 
         {/* fecho — linha única, tipografia acima do H2 */}
         <p className="mt-16 font-display text-[38px] font-light leading-[1.02] tracking-[-0.02em] md:mt-24 md:text-[112px]">
-          Sua loja não é segunda renda,
-          <br />
+          Sua loja não é segunda renda,{" "}
           <span className="text-bastelli-orange">
             não é apenas a plataforma e nem apenas anúncio.
           </span>
@@ -584,7 +582,6 @@ function QuebraDeCrenca() {
     </section>
   );
 }
-
 /* ============================================================
    4. PROBLEMA REAL — mapa
 ============================================================ */
