@@ -1348,7 +1348,7 @@ function Accordion({
       >
         <span
           className={`font-display text-[42px] font-light leading-none tracking-tight md:text-[56px] ${
-            open ? "text-bastelli-orange" : "text-bastelli-navy/25"
+            open ? "text-bastelli-orange" : "text-bastelli-navy/55"
           } transition-colors group-hover:text-bastelli-orange`}
           aria-hidden
         >
