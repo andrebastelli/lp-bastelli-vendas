@@ -309,7 +309,7 @@ function Hero() {
               <span className="absolute inset-0 animate-ping rounded-full bg-bastelli-orange/70" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-bastelli-orange" />
             </span>
-            Curso introdutório
+            Curso Online Introdução ao E-commerce
           </span>
           <span className="text-white/70">com Bruno Bastelli</span>
         </div>
