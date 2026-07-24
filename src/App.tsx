@@ -303,16 +303,16 @@ function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl px-5 pb-20 pt-14 md:px-8 md:pb-28 md:pt-20">
-        <div className="mb-6 flex flex-nowrap items-center justify-center gap-3 whitespace-nowrap text-[10px] uppercase tracking-[0.24em] text-white/60 md:mb-8 md:text-[11px]">
-          <span className="inline-flex items-center gap-2 rounded-sm border border-bastelli-orange/50 bg-bastelli-orange/10 px-2.5 py-1 font-mono font-bold text-bastelli-orange">
-            <span className="relative inline-flex h-1.5 w-1.5">
-              <span className="absolute inset-0 animate-ping rounded-full bg-bastelli-orange/70" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-bastelli-orange" />
-            </span>
-            Curso Online Introdução ao E-commerce
-          </span>
-          <span className="text-white/70">com Bruno Bastelli</span>
-        </div>
+        <div className="mb-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[10px] uppercase tracking-[0.24em] text-white/60 md:mb-8 md:flex-nowrap md:whitespace-nowrap md:text-[11px]">
+  <span className="inline-flex items-center gap-2 whitespace-nowrap rounded-sm border border-bastelli-orange/50 bg-bastelli-orange/10 px-2.5 py-1 font-mono font-bold text-bastelli-orange">
+    <span className="relative inline-flex h-1.5 w-1.5">
+      <span className="absolute inset-0 animate-ping rounded-full bg-bastelli-orange/70" />
+      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-bastelli-orange" />
+    </span>
+    Curso Online Introdução ao E-commerce
+  </span>
+  <span className="whitespace-nowrap text-white/70">com Bruno Bastelli</span>
+</div>
 
         <h1 className="mx-auto max-w-5xl text-center font-display text-[38px] font-semibold leading-[1.02] tracking-[-0.025em] md:text-[80px]">
           Aprenda os{" "}
