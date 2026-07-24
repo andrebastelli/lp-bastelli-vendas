@@ -2470,13 +2470,14 @@ function FAQ() {
 ============================================================ */
 function CtaFinal() {
   return (
-    <section className="relative overflow-hidden bg-bastelli-navy text-white">
+    <section className="relative bg-bastelli-navy text-white">
       {/* Marca geométrica de fundo */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-6 top-6 select-none font-display text-[220px] leading-none tracking-tighter text-white/[0.04] md:-right-4 md:top-10 md:text-[420px]"
-      >
-        12
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        <div
+          className="absolute -right-6 top-6 select-none font-display text-[220px] leading-none tracking-tighter text-white/[0.04] md:-right-4 md:top-10 md:text-[420px]"
+        >
+          12
+        </div>
       </div>
 
       <div className="relative mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-32">
@@ -2520,19 +2521,21 @@ function CtaFinal() {
 
           {/* Bilhete assinado */}
           <div className="col-span-12 md:col-span-4 md:pt-24">
-            <div className="max-w-xs md:-rotate-[1.5deg]">
-              <div className="border-l-2 border-bastelli-orange pl-5">
-                <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/45">
-                  Nota do autor
-                </p>
-                <p className="mt-3 font-display text-[18px] leading-[1.45] text-white md:text-[20px]">
-  Eu reuni aqui exatamente o que gostaria de ter aprendido quando comecei. Sem promessas exageradas. Apenas o que realmente funciona.
-</p>
-                <div className="mt-5 flex items-center gap-3">
-                  <span className="h-px w-8 bg-white/40" />
-                  <span className="font-mono text-[11px] tracking-wide text-white/70">
-                    Bruno — Bastelli
-                  </span>
+            <div className="md:sticky md:top-24">
+              <div className="max-w-xs md:-rotate-[1.5deg]">
+                <div className="border-l-2 border-bastelli-orange pl-5">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/45">
+                    Nota do autor
+                  </p>
+                  <p className="mt-3 font-display text-[18px] leading-[1.45] text-white md:text-[20px]">
+                    Eu reuni aqui exatamente o que gostaria de ter aprendido quando comecei. Sem promessas exageradas. Apenas o que realmente funciona.
+                  </p>
+                  <div className="mt-5 flex items-center gap-3">
+                    <span className="h-px w-8 bg-white/40" />
+                    <span className="font-mono text-[11px] tracking-wide text-white/70">
+                      Bruno — Bastelli
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
