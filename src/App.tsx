@@ -1926,7 +1926,7 @@ function Oferta() {
   </article>
 
   {/* 02 */}
-  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.35fr_1fr] md:items-center md:gap-10">
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
     <div className="md:order-2">
       <img src={img07} className="w-full h-full max-h-[420px] object-contain" />
     </div>
