@@ -1902,161 +1902,140 @@ function Oferta() {
           <div className="min-w-0 md:col-span-7">
 <div
   ref={carouselRef}
-  className="-mx-5 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:block md:space-y-24 md:overflow-visible md:px-0 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+  className="-mx-5 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:block md:space-y-20 md:overflow-visible md:px-0 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
 >
-
   {/* 01 */}
-  <article className="w-[calc(100vw-2.5rem)] shrink-0 snap-center md:grid md:grid-cols-[0.8fr_1.2fr] md:gap-12">
-    <div className="max-w-[360px]">
-      <span className="font-mono text-[11px] text-bastelli-orange">
+  <article className="w-[calc(100vw-2.5rem)] shrink-0 snap-center md:w-auto md:shrink md:snap-none">
+    <div className="flex items-baseline gap-3">
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
         01 · Curso principal
       </span>
-
-      <h3 className="mt-4 font-display text-[32px] md:text-[44px] leading-[1.02]">
-        Curso de
-        <br />
-        E-commerce
-      </h3>
+      <span className="h-px flex-1 bg-bastelli-navy/15" />
+      <span className="font-mono text-[10px] text-bastelli-navy/40">
+        peça central
+      </span>
     </div>
 
-    <div>
-      <img src={img01} className="w-full scale-110 md:scale-125 object-cover rounded-md" />
+    <div className="mt-6">
+      <img src={img01} className="w-full rounded-md object-cover" />
     </div>
+
+    <h3 className="mt-6 font-display text-[30px] md:text-[44px]">
+      Curso Online de Introdução ao E-commerce com Bruno Bastelli.
+    </h3>
   </article>
 
   {/* 02 */}
-  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col md:grid md:grid-cols-[0.8fr_1.2fr] md:gap-12 md:items-center">
-    <div className="max-w-[320px]">
-      <span className="font-mono text-[11px] text-bastelli-orange">
-        02 · E-book
-      </span>
-
-      <h3 className="mt-4 font-display text-[30px] md:text-[38px] leading-[1.05]">
-        Roda do <span className="text-bastelli-orange">e</span>
-        <br />
-        E-commerce
-      </h3>
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div className="md:order-2">
+      <img src={img07} className="w-full rounded-md object-cover" />
     </div>
 
     <div>
-      <img src={img07} className="w-full scale-125 object-contain" />
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        02 · E-book
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Roda do E-commerce
+      </h3>
     </div>
   </article>
 
   {/* 03 */}
-  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col md:grid md:grid-cols-[1.2fr_0.8fr] md:gap-12 md:items-center">
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
     <div>
-      <img src={img02} className="w-full scale-110 object-cover rounded-md" />
+      <img src={img02} className="w-full rounded-md object-cover" />
     </div>
 
-    <div className="max-w-[320px]">
-      <span className="font-mono text-[11px] text-bastelli-orange">
+    <div>
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
         03 · Manual
       </span>
-
-      <h3 className="mt-4 font-display text-[28px] md:text-[34px] leading-[1.05]">
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
         Boas práticas
-        <br />
-        em checklist
       </h3>
     </div>
   </article>
 
   {/* 04 */}
-  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col md:grid md:grid-cols-[0.8fr_1.2fr] md:gap-12 md:items-center">
-    <div className="max-w-[320px]">
-      <span className="font-mono text-[11px] text-bastelli-orange">
-        04 · E-book
-      </span>
-
-      <h3 className="mt-4 font-display text-[28px] md:text-[34px]">
-        Introdução ao
-        <br />
-        E-commerce
-      </h3>
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div className="md:order-2">
+      <img src={img03} className="w-full rounded-md object-cover" />
     </div>
 
     <div>
-      <img src={img03} className="w-full scale-120 object-contain" />
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        04 · E-book
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Introdução ao E-commerce
+      </h3>
     </div>
   </article>
 
   {/* 05 */}
-  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col md:grid md:grid-cols-[1.2fr_0.8fr] md:gap-12 md:items-center">
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
     <div>
-      <img src={img05} className="w-full scale-110 object-cover rounded-md" />
+      <img src={img05} className="w-full rounded-md object-cover" />
     </div>
 
-    <div className="max-w-[320px]">
-      <span className="font-mono text-[11px] text-bastelli-orange">
+    <div>
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
         05 · Ferramenta
       </span>
-
-      <h3 className="mt-4 font-display text-[28px] md:text-[34px]">
-        Metas
-        <br />
-        inteligentes
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Metas inteligentes
       </h3>
     </div>
   </article>
 
   {/* 06 */}
-  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col md:grid md:grid-cols-[0.8fr_1.2fr] md:gap-12 md:items-center">
-    <div className="max-w-[320px]">
-      <span className="font-mono text-[11px] text-bastelli-orange">
-        06 · Planilha
-      </span>
-
-      <h3 className="mt-4 font-display text-[28px] md:text-[34px]">
-        Ofertas
-        <br />
-        validadas
-      </h3>
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div className="md:order-2">
+      <img src={img06} className="w-full rounded-md object-cover" />
     </div>
 
     <div>
-      <img src={img06} className="w-full scale-120 object-contain" />
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        06 · Planilha
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Ofertas validadas
+      </h3>
     </div>
   </article>
 
   {/* 07 */}
-  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col md:grid md:grid-cols-[1.2fr_0.8fr] md:gap-12 md:items-center">
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
     <div>
-      <img src={img08} className="w-full scale-110 object-cover rounded-md" />
+      <img src={img08} className="w-full rounded-md object-cover" />
     </div>
 
-    <div className="max-w-[320px]">
-      <span className="font-mono text-[11px] text-bastelli-orange">
+    <div>
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
         07 · Trello
       </span>
-
-      <h3 className="mt-4 font-display text-[28px] md:text-[34px]">
-        Campanhas
-        <br />
-        e ações
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Campanhas e ações
       </h3>
     </div>
   </article>
 
   {/* 08 */}
-  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col md:grid md:grid-cols-[0.8fr_1.2fr] md:gap-12 md:items-center">
-    <div className="max-w-[320px]">
-      <span className="font-mono text-[11px] text-bastelli-orange">
-        08 · Plataforma
-      </span>
-
-      <h3 className="mt-4 font-display text-[28px] md:text-[34px]">
-        Acesso via
-        <br />
-        Hotmart
-      </h3>
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div className="md:order-2">
+      <img src={img04} className="w-full rounded-md object-cover" />
     </div>
 
     <div>
-      <img src={img04} className="w-full scale-120 object-contain" />
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        08 · Plataforma
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Acesso via Hotmart
+      </h3>
     </div>
   </article>
-
 </div>
           </div>
 
