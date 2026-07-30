@@ -7,6 +7,14 @@ import BrunoDev from "@/assets/consuiltoria_com_cliente_bastelli.webp";
 import BrunoAgencia from "@/assets/bruno_agencia.webp";
 import BrunoClientes from "@/assets/bastelli_clientes.webp";
 import BrunoAbcomm from "@/assets/premio_abcomm.webp";
+import img01 from "@/assets/combo.webp";
+import img02 from "@/assets/boas_praticas.webp";
+import img03 from "@/assets/e-book.webp";
+import img04 from "@/assets/hotmart.webp";
+import img05 from "@/assets/planilha_metas.webp";
+import img06 from "@/assets/planilha_ofertas.webp";
+import img07 from "@/assets/roda_do_e_commerce.webp";
+import img08 from "@/assets/trello.webp";
 
 function useAutoScrollCarousel<T extends HTMLElement>(itemCount: number, intervalMs = 4500) {
   const ref = useRef<T | null>(null);
@@ -1857,7 +1865,7 @@ function ParaQuemE() {
    12. OFERTA
 ============================================================ */
 function Oferta() {
-  const carouselRef = useAutoScrollCarousel<HTMLDivElement>(3, 5000);
+  const carouselRef = useAutoScrollCarousel<HTMLDivElement>(8, 5000);
   return (
     <section id="oferta" className="bg-bastelli-paper">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-28">
@@ -1892,121 +1900,143 @@ function Oferta() {
         {/* Corpo — 7/5 assimétrico com itens de peso desigual */}
         <div className="mt-14 grid grid-cols-1 gap-10 md:mt-20 md:grid-cols-12 md:gap-12">
           <div className="min-w-0 md:col-span-7">
-            <div
-              ref={carouselRef}
-              className="-mx-5 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:block md:space-y-20 md:overflow-visible md:px-0 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            >
-            {/* Item 01 — dominante, foto grande em cima */}
-            <article className="w-[calc(100vw-2.5rem)] shrink-0 snap-center md:w-auto md:shrink md:snap-none">
-              <div className="flex items-baseline gap-3">
-                <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
-                  01 · Curso principal
-                </span>
-                <span aria-hidden className="h-px flex-1 bg-bastelli-navy/15" />
-                <span className="font-mono text-[10px] text-bastelli-navy/40">
-                  peça central
-                </span>
-              </div>
-              <div className="mt-6">
-                <Placeholder
-                  label="Frame real das aulas — dashboard do curso"
-                  ratio="16/9"
-                  tone="paper"
-                />
-              </div>
-              <h3 className="mt-6 font-display text-[30px] font-light leading-[1.02] tracking-tight text-bastelli-navy md:text-[44px]">
-                Curso Online de Introdução ao E-commerce com Bruno Bastelli.
-              </h3>
-              <p className="mt-4 max-w-[54ch] text-[15px] leading-relaxed text-bastelli-navy/75 md:text-[17px]">
-                12 módulos, 24 aulas, 4h28. Do primeiro planejamento até ler o
-                relatório da segunda-feira sem entrar em pânico. A visão inteira
-                da loja, na ordem em que as decisões acontecem.
-              </p>
-            </article>
+<div
+  ref={carouselRef}
+  className="-mx-5 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:block md:space-y-20 md:overflow-visible md:px-0 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+>
+  {/* 01 */}
+  <article className="w-[calc(100vw-2.5rem)] shrink-0 snap-center md:w-auto md:shrink md:snap-none">
+    <div className="flex items-baseline gap-3">
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        01 · Curso principal
+      </span>
+      <span className="h-px flex-1 bg-bastelli-navy/15" />
+      <span className="font-mono text-[10px] text-bastelli-navy/40">
+        peça central
+      </span>
+    </div>
 
-            {/* Item 02 — split horizontal, foto à direita, texto respirando */}
-            <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:shrink md:snap-none md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
-              <div className="md:order-2">
-                <Placeholder
-                  label="Mockup real do e-book — capa e páginas internas"
-                  ratio="16/10"
-                  tone="paper"
-                />
-              </div>
-              <div className="md:order-1">
-                <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
-                    02 · E-book
-                  </span>
-                  <span aria-hidden className="h-px flex-1 bg-bastelli-navy/15" />
-                </div>
-                <h3 className="mt-4 font-display text-[24px] font-light leading-[1.1] tracking-tight text-bastelli-navy md:text-[32px]">
-                  A{" "}
-                  <em className="font-serif italic text-bastelli-orange">
-                    Roda do E-commerce
-                  </em>{" "}
-                  no papel.
-                </h3>
-                <p className="mt-4 text-[14px] leading-relaxed text-bastelli-navy/75 md:text-[15px]">
-                  A metodologia da Bastelli traduzida num guia curto pra você
-                  consultar antes de tomar decisão — troca de plataforma,
-                  reajuste de preço, briefing de agência.
-                </p>
-                <dl className="mt-5 grid grid-cols-2 gap-y-2 font-mono text-[11px] text-bastelli-navy/55">
-                  <dt className="uppercase tracking-[0.2em]">Formato</dt>
-                  <dd className="text-right text-bastelli-navy/75">
-                    PDF · leitura rápida
-                  </dd>
-                  <dt className="uppercase tracking-[0.2em]">Uso</dt>
-                  <dd className="text-right text-bastelli-navy/75">
-                    consulta recorrente
-                  </dd>
-                </dl>
-              </div>
-            </article>
+    <div className="mt-6">
+      <img src={img01} className="w-full rounded-md object-cover" />
+    </div>
 
-            {/* Item 03 — mesmo formato do 02, com imagem à esquerda pra alternar o ritmo */}
-            <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:shrink md:snap-none md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
-              <div>
-                <Placeholder
-                  label="Mockup real do manual — capa e páginas internas"
-                  ratio="16/10"
-                  tone="paper"
-                />
-              </div>
-              <div>
-                <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
-                    03 · Manual
-                  </span>
-                  <span aria-hidden className="h-px flex-1 bg-bastelli-navy/15" />
-                </div>
-                <h3 className="mt-4 font-display text-[24px] font-light leading-[1.1] tracking-tight text-bastelli-navy md:text-[32px]">
-                  Boas práticas,{" "}
-                  <em className="font-serif italic text-bastelli-orange">
-                    em checklist
-                  </em>
-                  .
-                </h3>
-                <p className="mt-4 text-[14px] leading-relaxed text-bastelli-navy/75 md:text-[15px]">
-                  Checklist por etapa da Roda — o que revisar antes de subir
-                  produto novo, o que testar antes de rodar campanha, o que
-                  perguntar antes de fechar contrato com fornecedor. Pra você
-                  aplicar sem precisar terceirizar.
-                </p>
-                <dl className="mt-5 grid grid-cols-2 gap-y-2 font-mono text-[11px] text-bastelli-navy/55">
-                  <dt className="uppercase tracking-[0.2em]">Formato</dt>
-                  <dd className="text-right text-bastelli-navy/75">
-                    PDF · checklist
-                  </dd>
-                  <dt className="uppercase tracking-[0.2em]">Uso</dt>
-                  <dd className="text-right text-bastelli-navy/75">
-                    aplicação prática
-                  </dd>
-                </dl>
-              </div>
-            </article>
-            </div>
+    <h3 className="mt-6 font-display text-[30px] md:text-[44px]">
+      Curso Online de Introdução ao E-commerce com Bruno Bastelli.
+    </h3>
+  </article>
+
+  {/* 02 */}
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div className="md:order-2">
+      <img src={img07} className="w-full rounded-md object-cover" />
+    </div>
+
+    <div>
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        02 · E-book
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Roda do E-commerce
+      </h3>
+    </div>
+  </article>
+
+  {/* 03 */}
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div>
+      <img src={img02} className="w-full rounded-md object-cover" />
+    </div>
+
+    <div>
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        03 · Manual
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Boas práticas
+      </h3>
+    </div>
+  </article>
+
+  {/* 04 */}
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div className="md:order-2">
+      <img src={img03} className="w-full rounded-md object-cover" />
+    </div>
+
+    <div>
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        04 · E-book
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Introdução ao E-commerce
+      </h3>
+    </div>
+  </article>
+
+  {/* 05 */}
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div>
+      <img src={img05} className="w-full rounded-md object-cover" />
+    </div>
+
+    <div>
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        05 · Ferramenta
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Metas inteligentes
+      </h3>
+    </div>
+  </article>
+
+  {/* 06 */}
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div className="md:order-2">
+      <img src={img06} className="w-full rounded-md object-cover" />
+    </div>
+
+    <div>
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        06 · Planilha
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Ofertas validadas
+      </h3>
+    </div>
+  </article>
+
+  {/* 07 */}
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div>
+      <img src={img08} className="w-full rounded-md object-cover" />
+    </div>
+
+    <div>
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        07 · Trello
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Campanhas e ações
+      </h3>
+    </div>
+  </article>
+
+  {/* 08 */}
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+    <div className="md:order-2">
+      <img src={img04} className="w-full rounded-md object-cover" />
+    </div>
+
+    <div>
+      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
+        08 · Plataforma
+      </span>
+      <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
+        Acesso via Hotmart
+      </h3>
+    </div>
+  </article>
+</div>
           </div>
 
           {/* Aside — "recibo" com borda tracejada */}
