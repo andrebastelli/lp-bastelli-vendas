@@ -1941,23 +1941,17 @@ function Oferta() {
     </div>
   </article>
 
-  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16">
-  <div>
-    <img
-      src={img02}
-      className="w-full h-full max-h-[560px] md:max-h-[640px] object-contain"
-    />
-  </div>
-
-  <div>
-    <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange">
-      03 · Manual
-    </span>
-    <h3 className="mt-4 font-display text-[24px] md:text-[32px]">
-      Boas práticas
-    </h3>
-  </div>
-</article>
+  {/* 03 */}
+  <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
+     <div> 
+      <img src={img02} className="w-full h-full max-h-[420px] object-contain" /> 
+     </div> 
+      <div>
+        <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-bastelli-orange"> 03 · Manual 
+        </span>
+          <h3 className="mt-4 font-display text-[24px] md:text-[32px]"> Boas práticas</h3>
+      </div>
+  </article>
 
   {/* 04 */}
   <article className="flex w-[calc(100vw-2.5rem)] shrink-0 snap-center flex-col gap-6 md:grid md:w-auto md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
